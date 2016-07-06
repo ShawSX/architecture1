@@ -1,0 +1,7 @@
+com\xsy\architecture1\common\dao\BaseDAO.class
+com\xsy\architecture1\common\pageutil\PagePlugin.class
+com\xsy\architecture1\common\service\IBaseService.class
+com\xsy\architecture1\common\pageutil\Page.class
+com\xsy\architecture1\common\pageutil\ReflectHelper.class
+com\xsy\architecture1\common\vo\BaseModel.class
+com\xsy\architecture1\common\service\BaseService.class

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xsy.architecture1.customermgr.dao.CustomerDAO">
+	
+	<insert id="add" parameterType="CM">
+		insert into t_customer (customerId,pwd,showName,trueName,regiterTime) 
+		values(#{customerId},#{pwd},#{showName},#{trueName},#{regiterTime})
+	</insert>	
+	
+	<delete id="remove" parameterType="int">
+		delete from t_customer where id=#{id}
+	</delete>
+	
+	
+	<update id="update" parameterType="CM">
+		update t_customer set customerId = #{customerId},pwd = #{pwd},
+		showName = #{showName},trueName = #{trueName},regiterTime = #{regiterTime}
+		where id = #{id}
+	</update>
+	
+	
+	<select id="findById" parameterType="int" resultType="CM">
+		select * from t_customer where id=#{id}
+	</select>
+	
+	
+	<select id="listModelPage" parameterType="CQM" resultType="CM" >
+		select * from t_customer 
+		<where>
+			<if test="id!=null &amp;&amp; id>0">
+				and id = #{id}
+			</if>
+			<if test="customerId!=null ">
+				and customerId = #{customerId}
+			</if>
+			<if test="showName!=null">
+				and showName = #{showName}
+			</if>
+		</where>
+	</select>
+	
+</mapper>
+

@@ -1,0 +1,7 @@
+com\xsy\architecture1\customermgr\client\Client.class
+com\xsy\architecture1\customermgr\service\CustomerService.class
+com\xsy\architecture1\customermgr\vo\CustomerQueryModel.class
+com\xsy\architecture1\customermgr\dao\CustomerDAO.class
+com\xsy\architecture1\customermgr\service\ICustomerService.class
+com\xsy\architecture1\customermgr\vo\CustomerModel.class
+com\xsy\architecture1\customermgr\controller\CustomerController.class
